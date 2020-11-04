@@ -84,7 +84,7 @@ def predict(model, rng_key, samples, X, D_H):
 # create artificial regression dataset
 def get_data(N=50, D_X=3, sigma_obs=0.05, N_test=500):
     D_Y = 1  # create 1d outputs
-    np.random.seed(0)
+    #np.random.seed(0)
     X = jnp.linspace(-1, 1, N)
     X = jnp.power(X[:, np.newaxis], jnp.arange(D_X))
     W = 0.5 * np.random.randn(D_X)

@@ -608,10 +608,10 @@ class seed(Messenger):
     """
     def __init__(self, fn=None, rng_seed=None):
         if isinstance(rng_seed, int) or (isinstance(rng_seed, jnp.ndarray) and not jnp.shape(rng_seed)):
-            rng_seed = random.PRNGKey(rng_seed)
+            #rng_seed = random.PRNGKey(rng_seed)
         if not (isinstance(rng_seed, jnp.ndarray) and rng_seed.dtype == jnp.uint32 and rng_seed.shape == (2,)):
             raise TypeError('Incorrect type for rng_seed: {}'.format(type(rng_seed)))
-        self.rng_key = rng_seed
+        #self.rng_key = rng_seed
         super(seed, self).__init__(fn)
 
     def process_message(self, msg):

@@ -26,8 +26,8 @@ def set_rng_seed(rng_seed):
 
     :param int rng_seed: seed for Python and NumPy random states.
     """
-    random.seed(rng_seed)
-    np.random.seed(rng_seed)
+    #random.seed(rng_seed)
+    #np.random.seed(rng_seed)
 
 
 def enable_x64(use_x64=True):

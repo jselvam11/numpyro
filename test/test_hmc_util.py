@@ -57,7 +57,7 @@ def test_dual_averaging(jitted):
 @pytest.mark.filterwarnings('ignore:numpy.linalg support is experimental:UserWarning')
 def test_welford_covariance(jitted, diagonal, regularize):
     with optional(jitted, disable_jit()), optional(jitted, control_flow_prims_disabled()):
-        np.random.seed(0)
+        #np.random.seed(0)
         loc = np.random.randn(3)
         a = np.random.randn(3, 3)
         target_cov = np.matmul(a, a.T)
